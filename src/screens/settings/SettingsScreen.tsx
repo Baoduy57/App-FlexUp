@@ -7,11 +7,21 @@ import {
   Switch,
   SafeAreaView,
   StatusBar,
+  TouchableOpacity,
 } from "react-native";
 import { useTheme } from "../../context/ThemeContext";
+import { RootStackParamList } from "../../config/types";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { useNavigation } from "@react-navigation/native";
 
 export default function SettingsScreen() {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const { theme, mode, toggleTheme } = useTheme();
+
+  const handlePressWelcome = () => {
+    navigation.navigate("Welcome");
+  };
 
   return (
     <SafeAreaView
@@ -32,6 +42,13 @@ export default function SettingsScreen() {
           thumbColor={mode === "dark" ? "#32CD32" : "#f4f3f4"}
         />
       </View>
+
+      <TouchableOpacity
+        style={[styles.viewMore, { backgroundColor: theme.primary }]}
+        onPress={handlePressWelcome} // ✅ truyền đúng category
+      >
+        <Text style={{ color: "#fff" }}>Go Welcome</Text>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 }
@@ -56,5 +73,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 18,
+  },
+  viewMore: {
+    alignSelf: "flex-start",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+    marginTop: 8,
   },
 });

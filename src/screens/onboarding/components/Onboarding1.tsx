@@ -6,7 +6,7 @@ export default function Onboarding1({ onNext }: { onNext: () => void }) {
     <OnboardingTemplate
       title="Track Your Goal"
       description="Don’t worry if you have trouble determining your goals. We can help you determine your goals and track them."
-      image={require("../../../../assets/onboarding/onboard1.png")}
+      image={require("../../../../assets/image/ngon7.png")}
       onNext={onNext}
       isLast={false}
     />

@@ -20,21 +20,19 @@ export default function WelcomeScreen() {
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       <Image
-        source={require("../../../assets/onboarding/onboard1.png")} // đổi đường dẫn phù hợp
+        source={require("../../../assets/image/ngon2.png")} // đổi đường dẫn phù hợp
         style={styles.image}
         resizeMode="contain"
       />
 
-      <Text style={[styles.title, { color: theme.text }]}>
-        Welcome, Stefani
-      </Text>
+      <Text style={[styles.title, { color: theme.text }]}>Welcome, Kit</Text>
       <Text style={[styles.subtitle, { color: theme.text }]}>
         You are all set now, let’s reach your{"\n"}goals together with us
       </Text>
 
       <TouchableOpacity
         style={[styles.button, { backgroundColor: theme.primary }]}
-        onPress={() => navigation.navigate("Settings")} // hoặc màn bạn muốn
+        onPress={() => navigation.navigate("BottomTabs")} // hoặc màn bạn muốn
       >
         <Text style={styles.buttonText}>Go To Home</Text>
       </TouchableOpacity>

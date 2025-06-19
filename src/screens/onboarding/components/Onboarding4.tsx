@@ -12,7 +12,7 @@ export default function Onboarding4() {
     <OnboardingTemplate
       title="Improve Sleep Quality"
       description="Improve the quality of your sleep with us, good quality sleep can bring a good mood in the morning."
-      image={require("../../../../assets/onboarding/onboard2.png")}
+      image={require("../../../../assets/image/ngon2.png")}
       onNext={() => navigation.navigate("Register")}
       isLast
     />

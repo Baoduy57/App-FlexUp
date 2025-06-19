@@ -19,21 +19,21 @@ const goals = [
     title: "Improve Shape",
     description:
       "I have a low amount of body fat and need / want to build more muscle",
-    image: require("../../../assets/onboarding/onboard1.png"),
+    image: require("../../../assets/image/ngon4.png"),
   },
   {
     id: "2",
     title: "Lean & Tone",
     description:
       "I'm 'skinny fat'. I look thin but have no shape. I want to add lean muscle in the right way",
-    image: require("../../../assets/onboarding/onboard2.png"),
+    image: require("../../../assets/image/ngon6.png"),
   },
   {
     id: "3",
     title: "Lose a Fat",
     description:
       "I have over 20 lbs to lose. I want to drop all this fat and gain muscle mass",
-    image: require("../../../assets/onboarding/onboard2.png"),
+    image: require("../../../assets/image/ngon5.png"),
   },
 ];
 
@@ -95,13 +95,18 @@ export default function GoalSelectionScreen() {
                   style={styles.image}
                   resizeMode="contain"
                 />
-                <Text style={[styles.goalTitle, { color: theme.textcard }]}>
+                <Text
+                  style={[
+                    styles.goalTitle,
+                    { color: theme.textcard, fontSize: 25 },
+                  ]}
+                >
                   {item.title}
                 </Text>
                 <Text
                   style={[
                     styles.goalDesc,
-                    { color: theme.textcard, opacity: 0.7 },
+                    { color: theme.textcard, opacity: 0.7, fontSize: 15 },
                   ]}
                 >
                   {item.description}
@@ -134,13 +139,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   header: {
-    fontSize: 22,
+    fontSize: 25,
     fontWeight: "bold",
     marginTop: 20,
     textAlign: "center",
   },
   subText: {
-    fontSize: 14,
+    fontSize: 16,
     textAlign: "center",
     maxWidth: 300,
     marginBottom: 8,
@@ -157,8 +162,8 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   image: {
-    width: 150,
-    height: 150,
+    width: 300,
+    height: 300,
     marginBottom: 16,
   },
   goalTitle: {

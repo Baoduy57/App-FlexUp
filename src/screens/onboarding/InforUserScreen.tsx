@@ -39,7 +39,7 @@ export default function InforUserScreen() {
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       {/* IMAGE */}
       <Image
-        source={require("../../../assets/onboarding/onboard2.png")}
+        source={require("../../../assets/image/ngon.png")}
         style={styles.image}
         resizeMode="contain"
       />
